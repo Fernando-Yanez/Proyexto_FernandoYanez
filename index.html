@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1> Finansas en casa</h1>
+    </header>
+    <main>
+
+        <section class="contenedorInicial">
+            <!-- seccion de boton de registro y 'Inicio de sesion'-->
+            <div class="button_registro">
+
+                <label> Registrarse </label>
+
+                <button id="boton_registro" type="button">Registrarse</button>
+            </div>
+            <div class="button_Inicio">
+
+                <label> Ya estas registrado?</label>
+
+                <button onclick="redirigir()">Registrado</button>
+            </div>
+        </section>
+
+
+        <section class='contenedor_RegistroPersonas'> <!--Formulario para el ingreso de la inoformacion del usuario-->
+            <form class="formulario_registro_persona">
+                <label>Rut:</label><br>
+                <input type="text" id="rut" name="rut" placeholder="ej: 12345678-9" required><br><br>
+                <label>Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" placeholder="ej: Pepe" required><br><br>
+                <label>Edad:</label><br>
+                <input type="text" id="edad" name="edad" placeholder="ej: 99" required><br><br>
+                <label>Correo:</label><br>
+                <input type="email" id="email" name="email" placeholder="ej: inventa@uno.com" required><br><br>
+                <label>Presupuesto:</label><br>
+                <input type="text" id="presupuesto" name="presupuesto" placeholder="ej; 999999" required><br><br>
+
+                <button id='botton_AgregarPersona' type="button">Registrar persona</button>
+
+                <div class='mensaje_Error'></div>
+            </form>
+        </section>
+
+
+
+
+
+
+        <!--Segunda parte del proyecto, obtencion y calculos de la informacion ingresada-->
+    </main>
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+

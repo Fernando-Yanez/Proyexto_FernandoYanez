@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Finansas en casa</h1>
+    </header>
+    <main>
+
+
+
+
+        <!--Formulario para obtencion de informacion en caso de ya estar registrado-->
+        <section class='buscarPersona'>
+            <div class="div_BuscarPersona">
+                <form class="formulario_Buscar_persona">
+                    <label>Rut:</label>
+                    <input type="text" id="rut" name="rut" placeholder="12345678-9" required><br><br>
+                    <button id="boton_BuscarPersona"> Buscar</button>
+                    <div class='mensaje_Error'></div>
+                </form>
+            </div>
+        </section>
+
+
+
+        <!--Formulario de registor de gastos-->
+        <section class='contenedor_RegistroGastos'>
+            <div class="div_RegistoGastos">
+                <form class="formulario_registro_gastos">
+                    <label>Fecha:</label>
+                    <input type="date" id="date" name="date" required><br><br>
+                    <label>Categoría:</label>
+                    <select id="category" name="category">
+                        <option value="Comida">Comida</option>
+                        <option value="Transporte">Transporte</option>
+                        <option value="Vivienda">Vivienda</option>
+                        <option value="Entretenimiento">Entretenimiento</option>
+                    </select><br><br>
+                    <label>Descripción:</label>
+                    <input type="text" id="description" name="description" required><br><br>
+                    <label>Monto:</label>
+                    <input type="number" id="monto" name="monto" placeholder="Monto en CLP"   required><br><br>
+
+                    
+
+                    <button id='agregarGastos' type="button">Registrar gasto</button>
+                </form>
+            </div>
+            <!--Donde se motrara la informacion del usuario-->
+            <div class="div_informacionUsuario">
+                
+            </div>
+        </section>
+
+
+
+        <section class="container_cambioMoneda">
+            <div class="div_BotonMoneda">
+                <form class="cambioMoneda">
+                    <select name="moneda" id="moneda">
+                        <option value="CLP">CLP</option>
+                        <option value="USD">USD</option>
+                        
+                    </select>
+                </form>
+            </div>
+        </section>
+
+        <!--Mostrar gastos registrados-->
+
+        <section class="contenedor_MostrarGastos">
+
+
+ 
+
+            <div class="divMostrarGastos">
+                <table id="tablaGastos">
+
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="div_Chart">
+                <canvas id="canvas"></canvas>
+            </div>
+        </section>
+
+
+
+    </main>
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/gastos.js"></script>
+
+</body>
+
+</html>
